@@ -1,0 +1,17 @@
+.Button{
+   padding:10px;
+   border: solid 1px #000;
+   background:#fff;
+   margin: 5px;
+   cursor:pointer;
+   &:hover{
+      background:rgba(0,0,0,0.5);
+   }
+}
+
+.Valid{
+   background:greenyellow;
+}
+.Danger{
+   background:red;
+}

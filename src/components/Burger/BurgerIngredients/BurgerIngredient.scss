@@ -1,0 +1,201 @@
+$bread-w:80%;
+$ingredients-w:85%;
+$margin-between-ingredients:1.5%;
+
+.Bread{
+   width: $bread-w;
+   height:20%;
+   margin: $margin-between-ingredients auto;
+   animation: breatheBurger ease 3s infinite;
+   background:#bd6e23;
+   border-left:solid 25px #96571b;
+   box-sizing:border-box;
+   position:relative;
+   z-index:1;
+   &Top{
+      @extend .Bread;
+      border-top-left-radius:50px;
+      border-top-right-radius:50px;
+      margin-bottom:30px;
+      &:after{
+         bottom:-100%;
+      }
+   }
+   &Bottom{
+      @extend .Bread;
+      border-bottom-left-radius:20px;
+      border-bottom-right-radius:20px;
+   }
+      &:after{
+         content:'';
+         display:block;
+         position:relative;
+         height:40%;
+         width:100%;
+         background: #f9d2ae;
+         border-left:solid 25px #f1bb87;
+         left:-25px;
+         // box-sizing:border-box;
+      }
+}
+
+.Salad{
+   width: 100%;
+   height:4%;
+   margin:auto;
+   &:after, &:before{
+      display:inline-block;
+      content:'';
+      position:relative;
+      width:50%;
+      height:10px;
+      border-radius:50%;
+   }
+   &:before{
+      border-bottom:solid 5px #3ebd40;
+      left:10px;
+      top:-4px
+   }
+   &:after{
+      border-top:solid 5px #3ebd40;
+      left:-5px
+   }
+}
+
+.Cheese{
+   width: $ingredients-w + 10;
+   border-radius:50%;
+   border-top:5px solid #f2d525;
+   margin: 1% auto;
+}
+
+.Meat{
+   width: $ingredients-w;
+   height:16%;
+   margin: $margin-between-ingredients auto;
+   animation: breatheBurger ease 3s infinite;
+   background: repeating-linear-gradient(
+     170deg,
+     #3d2916,
+     #3d2916 2px,
+     #56391d 2px,
+     #56391d 4px
+   );
+   border-radius: 5px;
+   border-left:solid 25px #22170c;
+   box-sizing:border-box;
+}
+
+.Pickles{
+   width: $ingredients-w;
+   height:2%;
+   margin: $margin-between-ingredients auto;
+   animation: breatheBurger ease 3s infinite;
+   .Pickle{
+      width: 33%;
+      height:5px;
+      background:#20680b;
+      transform:rotate(3deg);
+      float:left;
+   }
+}
+
+
+.Onions{
+   width: $ingredients-w;
+   height:4%;
+   margin: 2px auto;
+   &:after, &:before{
+      content: '';
+      width: 50%;
+      height:50%;
+      background:#b44661;
+      transform:rotate(-2deg);
+   }
+   &:after{
+      float:left;
+   }
+   &:before{
+      float:right;
+   }
+}
+
+.Ketchup{
+   width: $ingredients-w;
+   height:3%;
+   margin: $margin-between-ingredients auto;
+   animation: breatheBurger ease 3s infinite;
+   background:#c30303;
+}
+
+.Seeds {
+    width: 5%;
+    height: 7%;
+    position: absolute;
+    background-color: white;
+    border-radius: 40%;
+    box-shadow: inset -2px -3px #c9c9c9;
+   &:after, &:before{
+       content: "";
+       width: 100%;
+       height: 100%;
+       position: absolute;
+       background-color: white;
+       border-radius: 40%;
+       box-shadow: inset -1px 2px #c9c9c9;
+   }
+   &1{
+       left: 15%;
+       top: 50%;
+       transform: rotate(0deg);
+      &:after {
+       left: -170%;
+       top: -260%;
+       transform: rotate(60deg);
+      }
+      &:before {
+         left: 180%;
+         top: -50%;
+         transform: rotate(60deg);
+      }
+   }
+   &2 {
+       right: 35%;
+       top: 50%;
+       transform: rotate(10deg);
+        &:after {
+          left: 350%;
+          top: -300%;
+          transform: rotate(0deg);
+        }
+        &:before {
+          left: 150%;
+          top: -130%;
+          transform: rotate(90deg);
+        }
+   }
+
+  &3 {
+    right: 65%;
+    top: 40%;
+    transform: rotate(10deg);
+     &:after {
+       left: 350%;
+       top: -50%;
+       transform: rotate(20deg);
+     }
+     &:before {
+       left: 150%;
+       top: -130%;
+       transform: rotate(120deg);
+     }
+  }
+}
+
+
+
+// @keyframes breatheBurger {
+//     0% {margin:0.5% auto;}
+//     50% {margin:5% auto;}
+//     100% {margin:0.5% auto;}
+// }
