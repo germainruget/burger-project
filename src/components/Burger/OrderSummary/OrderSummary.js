@@ -11,7 +11,6 @@ const orderSummary = (props) => {
 
    return(
       <div className={classes.OrderSummary} >
-         <h1>My Order</h1>
          <ul>
             {ingredientSummary}
          </ul>

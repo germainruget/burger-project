@@ -1,4 +1,20 @@
 .Modal{
+   h1{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      text-align: center;
+      background:#34495e;
+      color:#95a5a6;
+      margin:0;
+      padding:15px 0;
+      border-bottom:4px solid #95a5a6;
+   }
+
+   h1 + div{
+      margin-top:65px;
+   }
    width: 500px;
    position:fixed;
    left:calc(50% - 250px);

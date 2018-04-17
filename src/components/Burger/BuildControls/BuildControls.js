@@ -3,15 +3,6 @@ import classes from './BuildControls.scss';
 import BuildControl from './BuildControl/BuildControl';
 import Button from '../../UI/Button/Button'
 
-// const controls = [
-//       { label: 'Salad', type: 'salad'},
-//       { label: 'Onions', type: 'onions'},
-//       { label: 'Cheese', type: 'cheese'},
-//       { label: 'Meat', type: 'meat'},
-//       { label: 'Pickles', type: 'pickles'},
-//       { label: 'Ketchup', type: 'ketchup'}
-// ]
-
 const buildControls = (props) =>{
 
       const controls = Object.keys(props.ingredients)
@@ -34,7 +25,7 @@ const buildControls = (props) =>{
          {controls}
          <Button
             clicked={props.ordering}
-            className={classes.Order}
+            style={{marginTop: '30px'}}
             isDisable={!props.purchasable} >ORDER NOW</Button>
       </div>
    )

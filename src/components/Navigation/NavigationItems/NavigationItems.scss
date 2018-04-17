@@ -1,0 +1,28 @@
+.NavigationItems{
+   margin: 0;
+   padding:0;
+   list-style: none;
+   display: flex;
+   align-items: center;
+   height: 100%;
+   li{
+      margin: 0;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      height:100%;
+      a{
+         color:#95a5a6;
+         text-decoration: none;
+         height: 100%;
+         padding:16px 10px;
+         box-sizing: border-box;
+         border-bottom: solid 0px transparent;
+         transition:.2s ease;
+         &:hover, &:active, &:active{
+            background-color:#34495e;
+            border-bottom: solid 4px #95a5a6;
+         }
+      }
+   }
+}
