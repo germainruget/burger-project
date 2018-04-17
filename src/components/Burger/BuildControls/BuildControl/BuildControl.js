@@ -5,9 +5,9 @@ import classes from './BuildControl.scss';
 const buildControl = (props) =>{
    return(
       <div className={classes.BuildControl}>
+         <button className={classes.More} onClick={props.added}>+</button>
          <div>{props.label}</div>
-         <button onClick={props.added}>+</button>
-         <button onClick={props.remove} disabled={props.disabled}>-</button>
+         <button className={classes.Less} onClick={props.remove} disabled={props.disabled}>-</button>
       </div>
    )
 }

@@ -39,7 +39,6 @@ class BurgerBuilder extends Component{
             return ingredients[igKey];
          })
          .reduce((sum, el)=>{
-            console.log(sum, el)
             return sum + el;
          }, 0);
 
@@ -103,6 +102,10 @@ class BurgerBuilder extends Component{
          this.setState({ordering: true});
    }
 
+   continueOrderingHandler = () => {
+      alert("Continue Ordering..")
+   }
+
    cancelOrderingHandler = () =>{
       this.setState({ordering: false});
    }
@@ -120,7 +123,8 @@ class BurgerBuilder extends Component{
          <Aux>
             <Modal show={this.state.ordering} click={this.cancelOrderingHandler}>
                <OrderSummary
-                  clicked={this.cancelOrderingHandler}
+                  cancel={this.cancelOrderingHandler}
+                  continue={this.continueOrderingHandler}
                   ingredients={this.state.ingredients}      
                   price={this.state.totalPrice} />
             </Modal>
@@ -129,6 +133,7 @@ class BurgerBuilder extends Component{
                order={this.state.orderControl} />
             <BuildControls 
                ordering={this.orderingHandler}
+               ingredients={this.state.ingredients}
                ingredientAdd={this.addIngredientHandler}
                ingredientRemove={this.removeIngredientHandler}
                disabled={disableInfo}
