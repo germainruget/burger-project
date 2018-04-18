@@ -16,7 +16,7 @@ $margin-between-ingredients:1.5%;
       @extend .Bread;
       border-top-left-radius:50px;
       border-top-right-radius:50px;
-      margin-bottom:30px;
+      margin-bottom:20px;
       &:after{
          bottom:-100%;
       }
@@ -190,6 +190,12 @@ $margin-between-ingredients:1.5%;
        transform: rotate(120deg);
      }
   }
+}
+
+@media (min-width:500px){
+   .BreadTop{
+      margin-bottom: 30px;
+   }
 }
 
 
